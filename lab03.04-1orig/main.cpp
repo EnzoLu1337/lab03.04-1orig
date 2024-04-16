@@ -18,8 +18,7 @@ int main() {
         return 1;
     }
     int count = 0;
-    while (fileR >> student) {
-        student.printStud();    
+    while (fileR >> student) {   
         if (student.Gettotalsc() >= 215) fileW << student << std::endl;
     }
     fileR.close();
