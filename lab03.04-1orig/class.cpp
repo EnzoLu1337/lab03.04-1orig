@@ -10,20 +10,6 @@ Stud::Stud(std::string tempFirstName, std::string tempLastName, int tempsc1, int
     strcpy_s(firstName, 50, tempFirstName.c_str());
     strcpy_s(lastName, 50, tempLastName.c_str());
 }
-Stud::~Stud()
-{
-    std::cout << "Destructor called" << std::endl;
-}
-void Stud::printStud() {
-    std::cout << std::setw(10) << firstName << std::setw(10) << lastName << std::setw(4) << score1 << std::setw(4) << score2 << std::setw(4) << score3 << std::endl;
-}
-void Stud::studFromConsole() {
-    std::cout << "Имя: "; std::cin >> firstName;
-    std::cout << "Фамилия: "; std::cin >> lastName;
-    std::cout << "1 предмет "; std::cin >> score1;
-    std::cout << "2 предмет: "; std::cin >> score2;
-    std::cout << "3 предмет: "; std::cin >> score3;
-}
 std::istream& operator >> (std::istream& in, Stud& S) {
     in >> S.lastName;
     in >> S.firstName;

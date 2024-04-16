@@ -15,8 +15,6 @@ private:
 public:
     Stud();
     Stud(std::string tempFirstName, std::string tempLastName, int tempsc1, int tempsc2, int tempsc3);
-    ~Stud();
-    void studFromConsole();
     void SetLastName(std::string str) { strcpy_s(lastName, 50, str.c_str()); }
     void SetName(std::string str) { strcpy_s(firstName, 50, str.c_str()); }
     void Setsc1(int data) { score1 = data; }
@@ -28,7 +26,6 @@ public:
     const int Getsc2() { return score2; }
     const int Getsc3() { return score3; }
     const int Gettotalsc() { return score1 + score2 + score3; }
-    void printStud();
     friend std::ostream& operator<<(std::ostream& out, Stud& S);
     friend std::istream& operator>>(std::istream& in, Stud& S);
 
